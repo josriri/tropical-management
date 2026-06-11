@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: chatkazi-claude-bot
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: CHATKAZI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SYSTEM_PROMPT
+        value: "You are a helpful WhatsApp assistant. Keep replies concise and friendly, as if texting. Use plain text only — no markdown."
